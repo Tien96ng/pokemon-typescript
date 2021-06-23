@@ -1,6 +1,7 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
+import { PokemonsContainer } from './containers/PokemonsContainer';
 
 export default function App() {
 	const client: any = new ApolloClient({
@@ -10,7 +11,7 @@ export default function App() {
 	return (
 		<ApolloProvider client={client}>
 			{console.log(process.env.REACT_APP_POKEMON_GRAPHQL_ENDPOINT)}
-			Hello Pokemon
+			<PokemonsContainer />
 		</ApolloProvider>
 	)
 }
