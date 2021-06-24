@@ -10,7 +10,6 @@ export default function App() {
 
 	return (
 		<ApolloProvider client={client}>
-			{console.log(process.env.REACT_APP_POKEMON_GRAPHQL_ENDPOINT)}
 			<PokemonsContainer />
 		</ApolloProvider>
 	)
